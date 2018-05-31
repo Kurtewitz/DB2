@@ -1,0 +1,8 @@
+
+Hier erhalten Sie mein Feedback zu Ihrem Praktikum. Ich beziehe mich hierbei auf den Commit: 6642b106d78e60ced0f5b65a443b9a2abc1568a6
+
+
+Bitte beheben Sie die folgende(s) Problem(e) bis spätestens Mittwoch 02.05.18 23:55: 
+- Bitte fügen Sie noch Ihre Vorbereitung in einem universell lesbaren Format (pdf, jpg, png, etc.) dem "docs/01/ Ordner hinzu.
+
+

@@ -1,0 +1,16 @@
+
+Hier erhalten Sie mein Feedback zu Ihrem Praktikum. Ich beziehe mich hierbei auf den Commit: 
+
+
+Bitte beheben Sie die folgende(s) Problem(e) bis spätestens Mittwoch 16.05.18 23:55: 
+- Ihnen fehlt ein syntetischer Schlüssel für die Categorie der durch die Datenbank generiert wird.
+- Bitte definieren Sie den Namen der Categorie als unique.
+- Als Hinweis: Sie hätten die List<Answer> answers Question auch als @ElementList annotieren können. 
+
+
+### Update 17.05.18
+
+Ich habe keine gravierenden Mängel mehr an Ihrem Praktikum gefunden und in meiner Liste die Aufgabe als bestanden markiert. 
+
+Bitte schauen Sie sich auch nochmal die Analyse zu Ihrem Ergebnis unter: http://dakala.fbi.h-da.de/reports/ korrigieren Sie Anmerkungen die Sie als sinnvoll empfinden. 
+

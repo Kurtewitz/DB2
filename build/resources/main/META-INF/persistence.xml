@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+   <persistence-unit name="Datenbanken2PU" transaction-type="RESOURCE_LOCAL">
+      <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+      <!-- put your entity-classes here -->
+      <class>de.h_da.fbi.db2.stud.entity.Category</class>
+      <class>de.h_da.fbi.db2.stud.entity.Question</class>
+      <class>de.h_da.fbi.db2.stud.entity.Answer</class>
+      <class>de.h_da.fbi.db2.stud.entity.Player</class>
+      <class>de.h_da.fbi.db2.stud.entity.Game</class>
+      <class>de.h_da.fbi.db2.persistence.AnswerPK</class>
+      
+
+      <!-- this must be provided -->
+      <class>de.h_da.fbi.db2.persistence.LocalDateTimeConverter</class>
+      <class>de.h_da.fbi.db2.persistence.InstantConverter</class>
+      <properties>
+         <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@141.100.70.17:1521/orclpdb.fbi.h-da.de"/>
+         <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+         <property name="javax.persistence.jdbc.user" value="studc0y9"/>
+         <property name="javax.persistence.jdbc.password" value="studc"/>
+
+         <property name="javax.persistence.schema-generation.database.action" value="create"/>
+         <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+
+         <property name="eclipselink.logging.level" value="WARNING"/>
+         <property name="eclipselink.logging.exceptions" value="false"/>
+         <property name="eclipselink.logging.level.sql" value="FINE"/>
+         <property name="eclipselink.logging.parameters" value="true"/>
+         <property name="eclipselink.logging.timestamp" value="false"/>
+         <property name="eclipselink.logging.session" value="false"/>
+      </properties>
+   </persistence-unit>
+</persistence>

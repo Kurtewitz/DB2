@@ -1,0 +1,20 @@
+Akteur:		Spieler
+Auslöser:	Ein Spieler hat im Hauptmenü die Option "Spielen" ausgewählt.
+
+Normalablauf:
+1.	Der Spieler gibt an wie viele Fragen pro Kategorie er beantworten möchte.
+2.	Dem Spieler werden alle vorhandenen Kategorien angezeigt und er wird nach Auswahl gefragt (mindestens 2).
+3.	Liste von Fragen entsprechend der Eingaben in 1. und 2. erzeugen und speichern.
+4.	Den Zeitpunkt des Starts speichern, erste Frage mit ihren Antwortmöglichkeiten anzeigen und auf Eingabe des Spielers warten.
+5.	Die Antwort des Spielers auswerten (roter Text "falsch" / grüner Text "richtig") und nächste Frage mit ihren Antwortmöglichkeiten anzeigen.
+6.	Mit Punkt 5 fortfahren solange es noch Fragen zu stellen gibt.
+7.	Wenn die letzte Frage beantwortet wurde den Zeitpunkt speichern.
+8.	Die Anzahl der richtig beantworteten Fragen und die gebrauchte Zeit anzeigen.
+9.	Das Hauptmenü anzeigen.
+
+
+
+
+Alternative Abläufe:
+3.1	Nicht genug Fragen in einer Kategorie: mit per RNG ausgewählten Duplikaten auffüllen bis die gewünschte Anzahl erreicht ist und mit Schritt 4 fortfahren.
+X.1	Bei Eingabe von "X" oder "Exit" Vorgang abbrechen.
