@@ -111,7 +111,7 @@ public class Category {
     
     @Override
     public boolean equals(final Object object) {
-        return object instanceof Category && this.getCategory().equals((String) object);
+        return object instanceof Category && this.getCategory().equals( ( ( Category ) object ).getCategory() );
     }
 
     @Override

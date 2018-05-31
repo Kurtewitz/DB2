@@ -206,6 +206,39 @@ public class Main {
         
     }
     
+    public void askForAdditionalCategories() {
+        try {
+            System.out.println("Select at least " + (2 - categories.size()) + " more categories");
+            
+            byte[] userInputCategories = new byte[15];
+            
+            System.in.read(userInputCategories);
+            
+            String userInputAdditionalCategoriesString = new String(userInputCategories).trim();
+            
+            if(userInputAdditionalCategoriesString == null || userInputAdditionalCategoriesString.trim().length() < 1) {
+                askForAdditionalCategories();
+            }
+            
+            String[] additionalCategoriesStrings = userInputAdditionalCategoriesString.split(" ");
+            
+            
+            
+            for(String cat : additionalCategoriesStrings) {
+                
+                if(cat.isEmpty()) continue;
+                
+                int chosenID = Integer.parseInt(cat.trim());
+                
+                Category category = emanag.find(Category.class, chosenID);
+                
+                categories.add(category);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     public void playGame() {
         
         try {
@@ -232,9 +265,15 @@ public class Main {
             
             String userInputCategoriesString = new String(userInputCategories).trim();
             
-            String[] categoriesStrings = userInputCategoriesString.split(" ");
             
             categories.clear();
+            
+            if(userInputCategoriesString == null || userInputCategoriesString.length() < 3) {
+                askForAdditionalCategories();
+            }
+            
+            String[] categoriesStrings = userInputCategoriesString.split(" ");
+            
             
             for(String cat : categoriesStrings) {
                 
@@ -242,8 +281,19 @@ public class Main {
                 
                 Category category = emanag.find(Category.class, chosenID);
                 
-                categories.add(category);
+                if(!categories.contains(category)) {
+                    categories.add(category);
+                }
             }
+            
+            while(categories.size() < 2) {
+                
+                askForAdditionalCategories();
+                
+            }
+            
+            
+            
             
             int questionMaximum = 0;
             for(Category cat : categories) {
@@ -321,6 +371,36 @@ public class Main {
     }
     
     
+    public void mainMenu() {
+        
+        try {
+            System.out.println("Type 1 to play a game");
+            System.out.println("Type 2 to load CSV file");
+            
+            byte[] userInput = new byte[15];
+            int actionSelectionInputLength = 0;
+            
+            actionSelectionInputLength = System.in.read(userInput);
+            
+            String actionSelectionInputString = new String(userInput).trim();
+            
+            
+            if(actionSelectionInputString.equals("1")) {
+                playGame();
+            }
+            else if(actionSelectionInputString.equals("2")) {
+                loadCsvFile();
+            }
+            else {
+                mainMenu();
+            }
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
     
     /**
      * Main Method and Entry-Point.
@@ -333,7 +413,7 @@ public class Main {
             Main main = new Main();
             //main.loadCsvFile();
 
-
+            
             byte[] userInput = new byte[10];
             int playerNameLength = 0;
 
@@ -344,7 +424,8 @@ public class Main {
             
             main.setOrCreatePlayer(new String(userInput).trim());
             
-            main.playGame();
+            main.mainMenu();
+            
             
             main.stop();
             

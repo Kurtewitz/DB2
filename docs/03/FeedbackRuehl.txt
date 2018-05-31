@@ -1,0 +1,11 @@
+Hier erhalten Sie mein Feedback zu Ihrem Praktikum. Ich beziehe mich hierbei auf den Commit: c7214176b17e19f68e1551032765ea6b9a41f77c
+
+ACHTUNG: bitte checken Sie in Zukunft immer die persisence.xml mit einer PU zum FB Oracle server ein. Sollten Sie dies bereits getan haben, fühlen Sie sich bitte nicht angesprochen. 
+
+
+Bitte beheben Sie die folgende(s) Problem(e) bis spätestens Donnerstag 31.05.18 23:55: 
+- Ihre Vorbereitung ist nicht oder nur unvollständig im Repo. Bitte korrigieren Sie dies.
+- Ihnen fehlt das Menue zum auswählen der verschiedenen Funktionen die das Program bieten soll. Bitte lesen Sie erneut die Aufgabenstellung! 
+- "Select at least 2 categories by typing their numbers with a [space] as separator" Lässt eine eingabe von nur einer Kategorie zu.
+
+
